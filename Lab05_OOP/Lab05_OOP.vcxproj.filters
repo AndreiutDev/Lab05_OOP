@@ -27,6 +27,12 @@
     <ClCompile Include="FilmUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="userRepo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FilmController.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Film.h">
@@ -36,6 +42,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FilmUI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="userRepo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FilmController.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

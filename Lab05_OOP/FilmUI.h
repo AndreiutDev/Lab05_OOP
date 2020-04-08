@@ -7,6 +7,10 @@ class FilmUI
 
 		void Menu();
 
+		void printUserMenu();
+
+		void printAdminMenu();
+
 		void UserMenu();
 
 		void AdminMenu();
