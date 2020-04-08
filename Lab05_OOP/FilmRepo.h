@@ -17,6 +17,10 @@ public:
 
 	bool updateLikes(Film f);
 
+	std::vector<Film> ShowMovies(std::string genre);
+
 	std::vector<Film>::iterator search(Film f);
+
+	~FilmRepo();
 };
 
