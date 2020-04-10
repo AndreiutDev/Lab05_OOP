@@ -6,6 +6,8 @@ class FilmUI
 	private:
 		FilmController controller;
 
+		void AddTestFilms();
+
 		std::string person;
 	public:
 		void Menu();

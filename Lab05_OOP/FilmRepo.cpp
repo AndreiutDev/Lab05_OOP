@@ -48,6 +48,18 @@ void FilmRepo::updateLikes(Film f, bool likeOrDislike) {
 
 }
 
+bool FilmRepo::updateFilm(Film f, Film newf)
+{
+	std::vector<Film>::iterator ptr = search(f);
+	if (ptr == filmList.end())
+		return false;
+	else {
+		filmList.erase(ptr);
+		filmList.push_back(newf);
+		return true;
+	}
+}
+
 std::vector<Film> FilmRepo::ShowMovies(std::string genre) {
 
 	std::vector<Film>::iterator ptr;

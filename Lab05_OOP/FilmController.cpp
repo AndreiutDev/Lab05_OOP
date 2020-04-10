@@ -19,6 +19,11 @@ void FilmController::GetupdateLikes(Film f, bool likeOrDislike)
 	return repo.updateLikes(f, likeOrDislike);
 }
 
+bool FilmController::GetupdateFilm(Film f, Film fnew)
+{
+	return repo.updateFilm(f, fnew);
+}
+
 std::vector<Film> FilmController::GetShowMovies(std::string genre)
 {
 	return repo.ShowMovies(genre);

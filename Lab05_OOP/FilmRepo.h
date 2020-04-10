@@ -17,6 +17,8 @@ public:
 
 	void updateLikes(Film f, bool likeOrDislike);
 
+	bool updateFilm(Film f, Film newf);
+
 	std::vector<Film> ShowMovies(std::string genre);
 
 	std::vector<Film>::iterator search(Film f);

@@ -16,6 +16,8 @@ class FilmController
 
 		void GetupdateLikes(Film f, bool likeOrDislike);
 
+		bool GetupdateFilm(Film f, Film fnew);
+
 		std::vector<Film> GetShowMovies(std::string genre);
 
 		std::vector<Film>::iterator GetSearch(Film f);
