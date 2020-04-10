@@ -15,7 +15,7 @@ public:
 
 	bool filmDelete(Film f);
 
-	bool updateLikes(Film f);
+	void updateLikes(Film f, bool likeOrDislike);
 
 	std::vector<Film> ShowMovies(std::string genre);
 

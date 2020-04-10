@@ -1,10 +1,13 @@
 #pragma once
 #include <iostream>
+#include "FilmController.h"
 class FilmUI
 {
 	private:
-		std::string person;
+		FilmController controller;
 
+		std::string person;
+	public:
 		void Menu();
 
 		void printUserMenu();
@@ -14,7 +17,7 @@ class FilmUI
 		void UserMenu();
 
 		void AdminMenu();
-	public:
+
 		FilmUI();
 
 		void Login();

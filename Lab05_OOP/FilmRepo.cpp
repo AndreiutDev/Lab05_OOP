@@ -1,5 +1,7 @@
+#include "Film.h"
 #include "FilmRepo.h"
-
+#include <windows.h>
+#include <atlstr.h>
 FilmRepo::FilmRepo()
 {
 
@@ -36,10 +38,13 @@ bool FilmRepo::filmDelete(Film f)
 	return true;
 }
 
-bool FilmRepo::updateLikes(Film f) {
+void FilmRepo::updateLikes(Film f, bool likeOrDislike) {
 
 	std::vector<Film>::iterator ptr = search(f);
-	ptr->SetLikeAmountint(ptr->GetLikeAmount() + 1);
+	if (likeOrDislike == true)
+		ptr->SetLikeAmountint(ptr->GetLikeAmount() + 1);
+	else
+		ptr->SetLikeAmountint(ptr->GetLikeAmount() - 1);
 
 }
 

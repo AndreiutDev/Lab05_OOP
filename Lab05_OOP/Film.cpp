@@ -1,5 +1,6 @@
 #include "Film.h"
-
+#include <windows.h>
+#include <atlstr.h>
 Film::Film(std::string title, std::string genre, int apparitionYear, int likeAmount, LPCWSTR trailer)
 {
 	this->title = title;

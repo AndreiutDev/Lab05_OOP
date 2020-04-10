@@ -14,7 +14,7 @@ class FilmController
 
 		bool GetfilmDelete(Film f);
 
-		bool GetupdateLikes(Film f);
+		void GetupdateLikes(Film f, bool likeOrDislike);
 
 		std::vector<Film> GetShowMovies(std::string genre);
 
@@ -24,6 +24,8 @@ class FilmController
 		bool GetwishListAdd(Film f);
 
 		bool GetwishListDelete(Film f);
+
+		std::vector<Film> GetShowWishList();
 
 		std::vector<Film>::iterator GetwishListSearch(Film f);
 };

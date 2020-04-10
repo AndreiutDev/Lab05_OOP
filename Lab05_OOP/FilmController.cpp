@@ -1,5 +1,9 @@
 #include "FilmController.h"
-
+#include "Film.h"
+#include "userRepo.h"
+#include "FilmRepo.h"
+#include <windows.h>
+#include <atlstr.h>
 bool FilmController::GetfilmAdd(Film f)
 {
 	return repo.filmAdd(f);
@@ -10,9 +14,9 @@ bool FilmController::GetfilmDelete(Film f)
 	return repo.filmDelete(f);
 }
 
-bool FilmController::GetupdateLikes(Film f)
+void FilmController::GetupdateLikes(Film f, bool likeOrDislike)
 {
-	return repo.updateLikes(f);
+	return repo.updateLikes(f, likeOrDislike);
 }
 
 std::vector<Film> FilmController::GetShowMovies(std::string genre)
@@ -29,6 +33,11 @@ std::vector<Film>::iterator FilmController::GetSearch(Film f)
 bool FilmController::GetwishListAdd(Film f)
 {
 	return userRepo.wishListAdd(f);
+}
+
+std::vector<Film> FilmController::GetShowWishList()
+{
+	return userRepo.ShowWishList();
 }
 
 bool FilmController::GetwishListDelete(Film f)

@@ -30,3 +30,12 @@ bool userRepo::wishListDelete(Film f)
 	wishList.erase(ptr);
 	return true;
 }
+
+std::vector<Film> userRepo::ShowWishList()
+{
+	std::vector<Film> cpy;
+	std::vector<Film>::iterator ptr;
+	for (ptr = wishList.begin(); ptr < wishList.end(); ptr++)
+		cpy.push_back(*ptr);
+	return cpy;
+}

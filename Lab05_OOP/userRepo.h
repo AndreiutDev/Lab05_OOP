@@ -12,5 +12,7 @@ public:
 	bool wishListDelete(Film f);
 
 	std::vector<Film>::iterator wishListSearch(Film f);
+
+	std::vector<Film> ShowWishList();
 };
 
