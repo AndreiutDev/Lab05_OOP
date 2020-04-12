@@ -4,6 +4,7 @@
 #include "FilmRepo.h"
 #include <windows.h>
 #include <atlstr.h>
+
 bool FilmController::GetfilmAdd(Film f)
 {
 	return repo.filmAdd(f);

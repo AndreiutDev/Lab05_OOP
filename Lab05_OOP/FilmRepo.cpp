@@ -2,6 +2,7 @@
 #include "FilmRepo.h"
 #include <windows.h>
 #include <atlstr.h>
+
 FilmRepo::FilmRepo()
 {
 
@@ -41,11 +42,7 @@ bool FilmRepo::filmDelete(Film f)
 void FilmRepo::updateLikes(Film f, bool likeOrDislike) {
 
 	std::vector<Film>::iterator ptr = search(f);
-	if (likeOrDislike == true)
-		ptr->SetLikeAmountint(ptr->GetLikeAmount() + 1);
-	else
-		ptr->SetLikeAmountint(ptr->GetLikeAmount() - 1);
-
+	ptr->SetLikeAmountint(300);
 }
 
 bool FilmRepo::updateFilm(Film f, Film newf)
@@ -72,7 +69,6 @@ std::vector<Film> FilmRepo::ShowMovies(std::string genre) {
 			ok = true;
 		}
 	}
-
 	if (ok == false) {
 		genre_list = this->filmList;
 	}
