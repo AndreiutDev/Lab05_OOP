@@ -138,19 +138,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AdminUI.cpp" />
     <ClCompile Include="Film.cpp" />
     <ClCompile Include="FilmController.cpp" />
     <ClCompile Include="FilmMain.cpp" />
     <ClCompile Include="FilmRepo.cpp" />
     <ClCompile Include="FilmUI.cpp" />
     <ClCompile Include="userRepo.cpp" />
+    <ClCompile Include="UserUI.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AdminUI.h" />
     <ClInclude Include="Film.h" />
     <ClInclude Include="FilmController.h" />
     <ClInclude Include="FilmRepo.h" />
     <ClInclude Include="FilmUI.h" />
     <ClInclude Include="userRepo.h" />
+    <ClInclude Include="UserUI.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
