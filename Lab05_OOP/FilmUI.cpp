@@ -45,12 +45,12 @@ void FilmUI::Login() {
 void FilmUI::Menu() {
 	this->AddTestFilms();
 	if (this->person == "User") {
-		//this->UserMenu();
+
 		UserUI UserMenu = UserUI(controller);
 		UserMenu.Menu();
 	}
 	else{
-		//this->AdminMenu();
+
 		AdminUI AdminMenu = AdminUI(controller);
 		AdminMenu.Menu();
 	}
