@@ -1,7 +1,7 @@
 #include "Film.h"
 #include <windows.h>
 #include <atlstr.h>
-Film::Film(std::string title, std::string genre, int apparitionYear, int likeAmount, LPCWSTR trailer)
+Film::Film(std::string title, std::string genre, int apparitionYear, int likeAmount, std::wstring trailer)
 {
 	this->title = title;
 	this->genre = genre;
@@ -30,12 +30,12 @@ int Film::GetLikeAmount()
 	return likeAmount;
 }
 
-LPCWSTR Film::GetTrailer()
+std::wstring Film::GetTrailer()
 {
 	return trailer;
 }
 
-void Film::SetTrailer(LPCWSTR other)
+void Film::SetTrailer(std::wstring other)
 {
 	trailer = other;
 }

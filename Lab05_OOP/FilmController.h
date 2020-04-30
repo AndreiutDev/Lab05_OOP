@@ -1,13 +1,19 @@
 #pragma once
 #include "FilmRepo.h"
 #include "userRepo.h"
+#include <iostream>
 
 class FilmController
 {
 	private:
 		FilmRepo repo;
-		userRepo userRepo;
+		WishlistRepo userRepo;
+
+
 	public:
+
+
+		void AddTestFilms();
 		//FILM REPO
 
 		///-------------------------------------------------------------------------------------------------
@@ -17,7 +23,8 @@ class FilmController
 		///
 		/// <returns>	True if it succeeds, false if it fails. </returns>
 
-		bool GetfilmAdd(Film f);
+		void Add();
+
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Gets the delete film function from the repository </summary>
@@ -25,7 +32,7 @@ class FilmController
 		/// <param name="f">	A Film to process. </param>
 		///
 		/// <returns>	True if it succeeds, false if it fails. </returns>
-		bool GetfilmDelete(Film f);
+		void Delete();
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Gets the update film function from the repository </summary>
@@ -40,7 +47,7 @@ class FilmController
 		/// <param name="f">	A Film to process. </param>
 		///
 		/// <returns>	True if it succeeds, false if it fails. </returns>
-		bool GetupdateFilm(Film f, Film fnew);
+		void Update();
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Gets show movies. </summary>
@@ -49,7 +56,7 @@ class FilmController
 		///
 		/// <returns>	The show movies. </returns>
 
-		std::vector<Film> GetShowMovies(std::string genre);
+		void ShowMovies();
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Gets a search. </summary>
@@ -59,6 +66,8 @@ class FilmController
 		/// <returns>	The search. </returns>
 
 		std::vector<Film>::iterator GetSearch(Film f);
+
+		void GetMoviesWithGenre();
 
 		//USER REPO
 
@@ -78,14 +87,16 @@ class FilmController
 		///
 		/// <returns>	True if it succeeds, false if it fails. </returns>
 
-		bool GetwishListDelete(Film f);
+		void DeleteFromWishlist();
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Gets show wish list. </summary>
 		/// 
 		/// <returns>	The show wish list. </returns>
 
-		std::vector<Film> GetShowWishList();
+		void ShowWishList();
+
+
 
 		///-------------------------------------------------------------------------------------------------
 		/// <summary>	Getwish list search. </summary>
@@ -95,4 +106,8 @@ class FilmController
 		/// <returns>	A std::vector&lt;Film&gt;::iterator. </returns>
 
 		std::vector<Film>::iterator GetwishListSearch(Film f);
+
+		//Menu ADMIN
+		
+
 };

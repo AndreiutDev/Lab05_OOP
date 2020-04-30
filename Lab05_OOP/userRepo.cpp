@@ -1,6 +1,6 @@
 #include "userRepo.h"
 
-std::vector<Film>::iterator userRepo::wishListSearch(Film f)
+std::vector<Film>::iterator WishlistRepo::wishListSearch(Film f)
 {
 	std::vector<Film>::iterator ptr;
 	for (ptr = wishList.begin(); ptr < wishList.end(); ptr++)
@@ -13,7 +13,7 @@ std::vector<Film>::iterator userRepo::wishListSearch(Film f)
 	return ptr;
 }
 
-bool userRepo::wishListAdd(Film f)
+bool WishlistRepo::wishListAdd(Film f)
 {
 	std::vector<Film>::iterator ptr = wishListSearch(f);
 	if (ptr != wishList.end())
@@ -22,7 +22,7 @@ bool userRepo::wishListAdd(Film f)
 	return true;
 }
 
-bool userRepo::wishListDelete(Film f)
+bool WishlistRepo::wishListDelete(Film f)
 {
 	std::vector<Film>::iterator ptr = wishListSearch(f);
 	if (ptr == wishList.end())
@@ -31,7 +31,7 @@ bool userRepo::wishListDelete(Film f)
 	return true;
 }
 
-std::vector<Film> userRepo::ShowWishList()
+std::vector<Film> WishlistRepo::ShowWishList()
 {
 	std::vector<Film> cpy;
 	std::vector<Film>::iterator ptr;

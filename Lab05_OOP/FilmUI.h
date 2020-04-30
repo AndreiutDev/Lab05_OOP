@@ -7,8 +7,8 @@ class FilmUI
 {
 	private:
 		FilmController controller;
+		FilmRepo repo;
 
-		void AddTestFilms();
 
 		std::string person;
 	public:

@@ -8,17 +8,17 @@ private:
 	std::string genre;
 	int apparitionYear;
 	int likeAmount;
-	LPCWSTR trailer;
+	std::wstring trailer;
 
 public:
-	Film(std::string title, std::string genre, int apparitionYear, int likeAmount, LPCWSTR trailer);
+	Film(std::string title, std::string genre, int apparitionYear, int likeAmount, std::wstring trailer);
 	std::string GetTitle();
 	std::string GetGenre();
 	int GetApparitionYear();
 	int GetLikeAmount();
-	LPCWSTR GetTrailer();
+	std::wstring GetTrailer();
 
-	void SetTrailer(LPCWSTR other);
+	void SetTrailer(std::wstring other);
 	void SetTitle(std::string other);
 	void SetGenre(std::string other);
 	void SetApparitionYearint(int other);

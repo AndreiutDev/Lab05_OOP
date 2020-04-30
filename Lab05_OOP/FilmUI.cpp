@@ -11,6 +11,7 @@ FilmUI::FilmUI() {
 }
 
 void FilmUI::Login() {
+	this->person = "";
 	bool running = true;
 	int key;
 	int pass;
@@ -26,12 +27,16 @@ void FilmUI::Login() {
 				this->person == "Admin";
 				running = false;
 			}
+			this->Menu();
 			break;
 		case 2:
 			this->person = "User";
+			this->Menu();
 			running = false;
+
 			break;
 		case 0:
+			this->person = "";
 			running = false;
 			break;
 
@@ -39,42 +44,24 @@ void FilmUI::Login() {
 			std::cout << "Invalid option. Choose again!";
 		}
 	}
-	this->Menu();
+	
 }
 
 void FilmUI::Menu() {
-	this->AddTestFilms();
+	controller.AddTestFilms();
 	if (this->person == "User") {
 
 		UserUI UserMenu = UserUI(controller);
 		UserMenu.Menu();
+		Login();
 	}
 	else{
 
 		AdminUI AdminMenu = AdminUI(controller);
 		AdminMenu.Menu();
+		Login();
 	}
 }
 
 
 
-
-void FilmUI::AddTestFilms() {
-
-	//Film f = Film(title, genre, year, likes, trailer_fain);
-
-	Film f1 = Film("The Matrix", "action", 1999, 1000, L"https://www.youtube.com/watch?v=vKQi3bBA1y8");
-	Film f2 = Film("Psycho", "horror", 1960, 909, L"https://www.youtube.com/watch?v=Wz719b9QUqY");
-	Film f3 = Film("Titanic", "drama", 1997, 999, L"https://www.youtube.com/watch?v=kVrqfYjkTdQ");
-	Film f4 = Film("Hereditary", "horror", 2018, 90, L"https://www.youtube.com/watch?v=YHxcDbai7aU");
-	Film f5 = Film("Avengers", "action", 2012, 1234, L"https://www.youtube.com/watch?v=eOrNdBpGMv8");
-	Film f6 = Film("Avengers Infinity War", "action", 2017, 999, L"https://www.youtube.com/watch?v=6ZfuNTqbHE8");
-
-	controller.GetfilmAdd(f1);
-	controller.GetfilmAdd(f2);
-	controller.GetfilmAdd(f3);
-	controller.GetfilmAdd(f4);
-	controller.GetfilmAdd(f5);
-	controller.GetfilmAdd(f6);
-
-}

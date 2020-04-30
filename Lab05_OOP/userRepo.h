@@ -2,7 +2,7 @@
 #include <vector>
 #include  "Film.h"
 
-class userRepo
+class WishlistRepo
 {
 private:
 	std::vector<Film> wishList;
@@ -28,7 +28,7 @@ public:
 
 	///-------------------------------------------------------------------------------------------------
 	/// <summary>	Wish list search. </summary>
-	/// 
+	/// TODO-aici!
 	/// <param name="f">	A Film to process. </param>
 
 
